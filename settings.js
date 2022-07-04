@@ -19,36 +19,36 @@ global.APIKeys = {
 }
 
 //customize settings\\
-global.owner = ['Your Number']
-global.premium = ['Your Number']
-global.ownernomer = 'Your Number'
-global.ownername = '🐦Star Boy Nexus'
-global.botname = 'Gojo-Satoru'
-global.footer = '©NexusNwInc.'
-global.ig = 'https://github.com/nexusNw'
+global.owner = ['212630215371']
+global.premium = ['212630215371']
+global.ownernomer = '212630215371'
+global.ownername = 'VANITAS'
+global.botname = 'VANITAS BOT'
+global.footer = '©VANITASInc.'
+global.ig = 'https://instagram.com/mohammed_xf16'
 global.region = 'India, South India, Kerala'
-global.sc = 'https://github.com/nexusNw/Gojo-Satoru'
-global.myweb = 'https://youtube.com/channel/UCqoUjPvDdb0kjXNYdvPPpHQ'
-global.packname = 'Gojo-Satoru'
-global.author = '🐦Star Boy Nexus'
+global.sc = 'https://instagram.com/mohammed_xf16'
+global.myweb = 'https://instagram.com/mohammed_xf16'
+global.packname = 'bot'
+global.author = 'vanitas'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'Done ✓',
-    admin: 'This Feature Is Only For Admin!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'Wait A minute...',
-    error: 'Error! Maybe Api Key Is Expired🤔!',
+    success: 'تممممممممممم ✓',
+    admin: 'للأدمن !',
+    botAdmin: 'أعطيني إشرااااف!',
+    owner: 'للمطور بس!',
+    group: 'للمجموعات فقط!',
+    private: 'فالخاص فقط!',
+    bot: 'للبوت فقط',
+    wait: 'إنتضررررررررر...',
+    error: 'خطااااااااااا!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
     global.limitawal = {
     premium: "Infinity",
-    free: 12,
+    free: "Infinity",
     monayawal: 1000
 }
    global.rpg = {
