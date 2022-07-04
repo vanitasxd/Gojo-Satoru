@@ -1120,12 +1120,12 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'حبيبتي': {
+            case 'حبيبين': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `👫حبيبتك هي
+            let jawab = `حبيبين هم
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
@@ -1225,10 +1225,10 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
       case 'الفخم':
       case 'الغاي':
       case 'الأسود':
-      case 'bastard':
-      case 'stubble':
-      case 'dog':
-      case 'fuck':
+      case 'الملك':
+      case 'الحب':
+      case 'حبيبي':
+      case 'حبيبتي':
       case 'ape':
       case 'noob':
       case 'great':
@@ -1279,7 +1279,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `The Most *${command}* Here Is @${jodoh.split('@')[0]}`
+            let jawab = `ال *${command}* هو @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: '👀', buttonText: { displayText: '👀😂' }, type: 1 }
@@ -1343,7 +1343,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
           reply(`Exif Has Been Successfully Changed to\n\n🐦 Packname : ${global.packname}\n🐦 Author : ${global.author}`)
             }
             break
-	case 'kick': {
+	case 'طرد': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1351,7 +1351,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'add': {
+	case 'إضافة': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1437,7 +1437,7 @@ let teks = `╚»˙·٠•●♥ منشن جماعي♥●•٠·˙«╝
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'hidetag': {
+                case 'منشن-مخفي': {
             if (!m.isGroup) return replay(`${mess.group}`)
             if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
@@ -1834,7 +1834,7 @@ break
                  GojoMdNx.sendTextWithMentions(m.chat, teks, m)
              }
              break
-             case 'listonlinexxx': case 'onlinelistxxx': {
+             case 'أونلاين': case 'onlinelistxxx': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
                     GojoMdNx.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐦 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
@@ -2051,28 +2051,28 @@ break
         })
         }
         break
-	    case 'play': case 'song': case 'صوت': {
-                if (!text) return reply(`Example : ${prefix + command} Stay`)
+	    case 'play': case 'song': case 'شغل': {
+                if (!text) return reply(`متل : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶صوت🎶'}, type: 1},
+                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️فيديو📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🐦 Title : ${anu.title}
-🐦 Ext : Search
-🐦 ID : ${anu.videoId}
-🐦 Duration : ${anu.timestamp}
-🐦 Viewes : ${anu.views}
-🐦 Uploaded On : ${anu.ago}
-🐦 Author : ${anu.author.name}
-🐦 Channel : ${anu.author.url}
-🐦 Description : ${anu.description}
-🐦 Url : ${anu.url}`,
+🐦 إسم : ${anu.title}
+🐦 النوع : بحث
+🐦 الأيدي : ${anu.videoId}
+🐦 الوقت : ${anu.timestamp}
+🐦 المشاهدات : ${anu.views}
+🐦 التاريخ : ${anu.ago}
+🐦 القنات : ${anu.author.name}
+🐦 القنات : ${anu.author.url}
+🐦 الوصف : ${anu.description}
+🐦 الرابط : ${anu.url}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2099,7 +2099,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-	    case 'getmusicxxx': {
+	    case 'صوت': {
                 let { yta } = require('./lib/y2mate')
 		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 let quality = args[1] ? args[1] : '128kbps'
@@ -2109,7 +2109,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
-            case 'getvideoxxx': {
+            case 'فيديوو': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) throw 'Reply Message'
@@ -2239,14 +2239,14 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
                     reply(mess.error)
                 })
             break
-            case 'animexxx':{
-                if (!text) return reply(`What Anime Are You Looking For??`)
+            case 'أنمي':{
+                if (!text) return reply(`أي أنمي تبحت عنه??`)
                 await reply(mess.wait)
                 nexusnw.Anime(q).then(async data => {
-                    let txt = `*-------「 ANIME-SEARCH 」-------*\n\n`
+                    let txt = `*-------「 أنمي 」-------*\n\n`
                     for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*📚 Url :* ${i.link}\n-----------------------------------------------------\n`
+                        txt += `*📫 إسم :* ${i.judul}\n`
+                        txt += `*📚 رابط:* ${i.link}\n-----------------------------------------------------\n`
                     }
                     let gam = await getBuffer(data[0].thumbnail.replace('https://www.anime-planet.com',''))
                     var but = [
@@ -2947,8 +2947,8 @@ Available Formats: pdf, docx, pptx, xlsx`)
 		}
 		}
 		break
-		case 'hadisxxx': case 'hadistxxx': {
-		if (!args[0]) return reply(`Example:
+		case 'hadit': case 'الحديث': {
+		if (!args[0]) return reply(`مثل:
 ${prefix + command} bukhari 1
 ${prefix + command} abu-daud 1
 
@@ -2969,7 +2969,7 @@ malik
 1 - 1594
 muslim
 1 - 5362`)
-		if (!args[1]) return reply(`Which Hadith??\n\nExample:\n${prefix + command} muslim 1`)
+		if (!args[1]) return reply(`أي حديث??\n\متل:\n${prefix + command} muslim 1`)
 		try {
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
 		let { number, arab, id } = res.find(v => v.number == args[1])
@@ -2984,12 +2984,10 @@ ${id}`)
 		}
 		break
 		case 'القرآن': {
-		if (!args[0]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is Surah Al-Fatihah Verse 2 Along With The Audio, And The Verse Is Just 1`)
-		if (!args[1]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is Surah Al-Fatihah Verse 2 Along With The Audio, And The Verse Is Just 1`)
+		if (!args[0]) return reply(`متل:\n${prefix + command} 1 2\n\nأكتب القرآن وأكتب رقم السورة وبعدها رقم الأية`)
+		if (!args[1]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nأكتب القرآن وأكتب رقم السورة وبعدها رقم الأية`)
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-		let txt = `*Arab* : ${res.result.data.text.arab}
-*English* : ${res.result.data.translation.en}
-*Indonesia* : ${res.result.data.translation.id}
+		let txt = `*الآية* : ${res.result.data.text.arab}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
 		reply(txt)
@@ -3341,7 +3339,7 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
-                     case 'alive': case 'bot':{
+                     case 'بوت': case 'bot':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3401,7 +3399,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'list': case 'menu': {
+            case 'الأوامر': case 'menu': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -3412,11 +3410,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')}, 
                             hydratedFooterText: `
-┌─❖_*🇸🇦 : قائمة الميزات في هذا الروبوت * _. 
-│    _*🇷🇺 : Список возможностей этого бота*_.                             
-│    _*🇬🇧 : List of features in this bot*_.
-│    _*🇮🇩 : Daftar Fitur Yang Ada Di Bot Ini*_.
-│    _*🇯🇵 : このボットの機能のリスト*_.
+┌─❖
 │「 هاي 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  مرحبااااااااا?😄

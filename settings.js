@@ -19,14 +19,14 @@ global.APIKeys = {
 }
 
 //customize settings\\
-global.owner = ['212630215371']
+global.owner = ['212684684427']
 global.premium = ['212630215371']
-global.ownernomer = '212630215371'
+global.ownernomer = '212684684427'
 global.ownername = 'VANITAS'
 global.botname = 'VANITAS BOT'
 global.footer = '©VANITASInc.'
 global.ig = 'https://instagram.com/mohammed_xf16'
-global.region = 'India, South India, Kerala'
+global.region = 'المغرب, الداخلة, حي الوحدة'
 global.sc = 'https://instagram.com/mohammed_xf16'
 global.myweb = 'https://instagram.com/mohammed_xf16'
 global.packname = 'bot'
