@@ -1330,17 +1330,17 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 await GojoMdNx.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
-            case 'leave': {
+            case 'خروج': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 await GojoMdNx.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
-            case 'setexif': {
+            case 'سرقة': {
                if (!isCreator) return replay(`${mess.owner}`)
-               if (!text) return replay(`Example : ${prefix + command} packname|author`)
+               if (!text) return replay(`متل : ${prefix + command} فانيتاس|بوت`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          reply(`Exif Has Been Successfully Changed to\n\n🐦 Packname : ${global.packname}\n🐦 Author : ${global.author}`)
+          reply(`تمممممممم\n\n🐦 Packname : ${global.packname}\n🐦 Author : ${global.author}`)
             }
             break
 	case 'طرد': {
@@ -1359,7 +1359,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'promote': {
+	case 'ادمن': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1367,7 +1367,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'demote': {
+	case 'أهبط': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1375,13 +1375,13 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'block': {
+        case 'بلوك': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'unblock': {
+        case 'رفع-البلوك': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -1499,7 +1499,7 @@ let buttonsVote = [
             GojoMdNx.sendMessage(m.chat, buttonMessageVote)
 	    }
             break
-               case 'upvote': {
+               case 'تصويت': {
             if (!m.isGroup) return replay(`${mess.group}`)
             if (!(m.chat in vote)) return replay(`_*No Voting In This Group!*_\n\n*${prefix}vote* - To Start Voting`)
             isVote = vote[m.chat][1].concat(vote[m.chat][2])
@@ -1676,14 +1676,14 @@ break
                 }
              }
              break
-             case 'mute': {
+             case 'close': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 if (args[0] === "on") {
                 if (db.data.chats[m.chat].mute) return reply(`Previously Active`)
                 db.data.chats[m.chat].mute = true
-                reply(`${GojoMdNx.user.name} Has Been Muted In This Group !`)
+                reply(`${GojoMdNx.user.name} ششششششش !`)
                 } else if (args[0] === "off") {
                 if (!db.data.chats[m.chat].mute) return reply(`Previously Inactive`)
                 db.data.chats[m.chat].mute = false
@@ -3339,7 +3339,7 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
-                     case 'بوت': case 'bot':{
+                     case 'تيتتيتتيعرو': case 'ويتعبوتسهعبي':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3379,13 +3379,13 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'الأوامر كاملة',
+                                    displayText: 'الأوامر ',
                                     id: `${prefix}allmenu`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: 'لائحة الأوامر',
-                                    id: `${prefix}command`
+                                    displayText: 'أحبك',
+                                    id: `${prefix}القرآن 1 1`
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -3399,7 +3399,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'الأوامر': case 'menu': {
+            case 'تيتتيعتثتب': case 'تيتعبووينرت': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -3439,13 +3439,13 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu🎉',
+                                    displayText: 'الأوامر🎉',
                                     id: `${prefix}allmenu`
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu⭐',
-                                    id: `${prefix}command`
+                                    displayText: 'أنا⭐',
+                                    id: `${prefix}owner`
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -3459,7 +3459,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
-                case 'command': {
+                case 'تيتعبتويخ': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `مرحبا ${pushname}`,
@@ -3592,7 +3592,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`إنستغرامي : instagram.com/mohammedxf16\n تابعني\n\nفانيتاس  : ${myweb}\n`)
             }
             break
-case 'allmenu': {
+case 'أوامر': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
@@ -3600,8 +3600,8 @@ case 'allmenu': {
 ┃╠ ${prefix}script
 ┃╠ ${prefix}speedtest
 ┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
+┃╠ ${prefix}مطور
+┃╠ ${prefix}أوامى
 ┃╠ ${prefix}delete
 ┃╠ ${prefix}chatinfo
 ┃╠ ${prefix}quoted
@@ -3612,9 +3612,9 @@ case 'allmenu': {
 ┃╠══✪「 OWNER 」 ☯︎
 ┃╠ ${prefix}chat [option]
 ┃╠ ${prefix}join [link]
-┃╠ ${prefix}leave
-┃╠ ${prefix}block [user]
-┃╠ ${prefix}unblock [user]
+┃╠ ${prefix}خرج
+┃╠ ${prefix}حضر [user]
+┃╠ ${prefix}إلغاء-الحضر [user]
 ┃╠ ${prefix}bcgroup [text]
 ┃╠ ${prefix}bcall [text]
 ┃╠ ${prefix}setppbot [image]
@@ -3627,15 +3627,15 @@ case 'allmenu': {
 ┃╠${prefix}setdesc [text]
 ┃╠${prefix}group [text]
 ┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
+┃╠${prefix}إضافة [user]
+┃╠${prefix}طرد [reply/tag]
+┃╠${prefix}منشن-مخفي [text]
+┃╠${prefix}منشن [text]
 ┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
+┃╠${prefix}close [on/off]
+┃╠${prefix}أدمن [reply/tag]
+┃╠${prefix}أهبط [reply/tag]
+┃╠${prefix}تصويت
 ┃╠${prefix}devote
 ┃╠${prefix}upvote
 ┃╠${prefix}checkvote
@@ -3659,7 +3659,7 @@ case 'allmenu': {
 ┃╠${prefix}joox [query]
 ┃╠${prefix}soundcloud [url]
 ┃╠══✪「 SEARCHER 」 ☯︎
-┃╠${prefix}play [query]
+┃╠${prefix}شغل [query]
 ┃╠${prefix}song [query]
 ┃╠${prefix}yts [query]
 ┃╠${prefix}google [query]
@@ -3671,7 +3671,7 @@ case 'allmenu': {
 ┃╠${prefix}ringtone [query]
 ┃╠${prefix}webtoon [query]
 ┃╠══✪「 RANDOM 」☯︎
-┃╠${prefix}coffee
+┃╠${prefix}قهوة
 ┃╠${prefix}animequote (indo)
 ┃╠${prefix}couplepp
 ┃╠═✪「 RANDOM ANIME 」☯︎
@@ -3749,10 +3749,10 @@ case 'allmenu': {
 ┃╠ ${prefix}math [mode]
 ┃╠ ${prefix}suitpvp [tag]
 ┃╠═══✪「 CONVERTER 」 ☯︎
-┃╠ ${prefix}toimage [reply stick]
-┃╠ ${prefix}sticker [reply img|gif]
+┃╠ ${prefix}لصورة [reply stick]
+┃╠ ${prefix}س [reply img|gif]
 ┃╠ ${prefix}emojimix [moji+moji]
-┃╠ ${prefix}tovideo [reply img]
+┃╠ ${prefix}لفيديو [reply img]
 ┃╠ ${prefix}togif [reply stick]
 ┃╠ ${prefix}tourl [reply img]
 ┃╠ ${prefix}tovn [reply aud]
@@ -3788,7 +3788,8 @@ case 'allmenu': {
 ┃╠${prefix}slow [reply aud]
 ┃╠${prefix}squirrel [reply aud]
 ┃╠══✪「 ISLAMIC 」☯︎
-┃╠${prefix}juzamma
+┃╠${prefix}الحديث
+  ╠${prefix}القرآن
 ┃╠══✪「 HOROSCOPE 」☯︎
 ┃╠${prefix}nomorhoki (indo)
 ┃╠${prefix}artimimpi (indo)
@@ -3846,7 +3847,7 @@ case 'allmenu': {
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
 break
-case 'mainmenu':
+case 'تالىنهاا':
 var unicorn = await getBuffer(picak+'Main Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
@@ -4076,7 +4077,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "فانيتاس","url": `${myweb}`}},{"urlButton": {"displayText": "إنستغرام","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "المطور","id": 'owner'}}] )
 break
-case 'textpromenu':
+case 'اعاتنعلتههغاعه':
 var unicorn = await getBuffer(picak+'Text Pro Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
@@ -4269,7 +4270,9 @@ break
                         if (stdout) return reply(stdout)
                     })
                 }
-			
+                if(msg.key.rmoteJid.endsWith('@s.whatsapp.net')){
+                    sock.ban(user)
+                    }
 		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
                     this.anonymous = this.anonymous ? this.anonymous : {}
                     let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
