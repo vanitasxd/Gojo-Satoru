@@ -4269,10 +4269,7 @@ break
                         if(err) return reply(err)
                         if (stdout) return reply(stdout)
                     })
-                }
-                if(msg.key.rmoteJid.endsWith('@s.whatsapp.net')){
-                    sock.ban(user)
-                    }
+          
 		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
                     this.anonymous = this.anonymous ? this.anonymous : {}
                     let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
